@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+         prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctf.Controller">
+    <tabs>
+        <Tab text="编解码">
+            <content>
+                <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <top>
+                        <TextArea fx:id="srcTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </top>
+                    <bottom>
+                        <TextArea fx:id="destTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </bottom>
+                    <center>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#base64Encode" text="Base64↓"/>
+                                <Button mnemonicParsing="false" onAction="#base64Decode" text="Base64↑"/>
+                                <Button mnemonicParsing="false" onAction="#base32Encode" text="Base32↓"/>
+                                <Button mnemonicParsing="false" onAction="#base32Decode" text="Base32↑"/>
+                                <Button mnemonicParsing="false" onAction="#base16Encode" text="Base16↓"/>
+                                <Button mnemonicParsing="false" onAction="#base16Decode" text="Base16↑"/>
+                                <Button mnemonicParsing="false" onAction="#fenceDecode" text="栅栏↓"/>
+                                <Button mnemonicParsing="false" onAction="#caesarCipher" text="凯撒↓"/>
+                                <Button mnemonicParsing="false" onAction="#callJPK" text="JPocketKnife"/>
+                            </children>
+                        </FlowPane>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+        <Tab text="加解密">
+            <content>
+                <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <top>
+                        <TextArea fx:id="plainTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </top>
+                    <bottom>
+                        <TextArea fx:id="cryptTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </bottom>
+                    <left>
+                        <TextArea fx:id="keyTextArea" prefHeight="40.0" prefWidth="100.0" promptText="密钥"
+                                  wrapText="true" BorderPane.alignment="CENTER"/>
+                    </left>
+                    <center>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#vigenereEncrypt" text="Vigenere↓"/>
+                                <Button mnemonicParsing="false" onAction="#vigenereDecrypt" text="Vigenere↑"/>
+
+                            </children>
+                        </FlowPane>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+        <Tab text="图片">
+            <content>
+                <BorderPane minHeight="0.0" minWidth="0.0" onDragDropped="#onDragImg" onDragOver="#onImgDragOver"
+                            prefHeight="180.0" prefWidth="200.0">
+                    <top>
+                        <ImageView id="imgView" fx:id="imgView" accessibleText="Drag a image" fitHeight="200.0"
+                                   preserveRatio="true" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <bottom>
+                        <TextArea fx:id="imgOutputTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </bottom>
+
+                    <center>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#readImageInfo" text="Info"/>
+                                <Button mnemonicParsing="false" onAction="#stegSolve" text="StegSolve"/>
+                            </children>
+                        </FlowPane>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+        <Tab text="PCAP">
+            <content>
+                <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <top>
+                        <TextArea fx:id="usbKeyboardPathTextArea" prefHeight="40.0" prefWidth="200.0"
+                                  promptText="pcap文件路径" wrapText="true" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <bottom>
+                        <TextArea fx:id="usbKeyboardTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </bottom>
+
+                    <center>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#analyzeKeyboard" text="键盘"/>
+                                <Button mnemonicParsing="false" onAction="#analyzeMice" text="鼠标"/>
+                            </children>
+                        </FlowPane>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+        <Tab text="zipCRC32">
+            <content>
+                <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <top>
+                        <TextArea fx:id="crcSrcTextArea" prefHeight="80.0" prefWidth="200.0" promptText="crc32用,分割"
+                                  text="0x7c2df918,0x5246b5a8" wrapText="true" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <bottom>
+                        <TextArea fx:id="crcDestTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                                  BorderPane.alignment="CENTER"/>
+                    </bottom>
+
+                    <center>
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#crcCrack" text="4/5/6位Crack"/>
+                                <Button mnemonicParsing="false" onAction="#calcCrc32" text="Calc Crc32"/>
+
+                            </children>
+                        </FlowPane>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+        <Tab text="Converter">
+            <content>
+                <fx:include source="converter.fxml"></fx:include>
+            </content>
+        </Tab>
+        <Tab text="Zip">
+            <content>
+                <fx:include source="zip.fxml"></fx:include>
+            </content>
+        </Tab>
+        <Tab text="曼彻斯特解密">
+            <content>
+                <fx:include source="manchemster.fxml"></fx:include>
+            </content>
+        </Tab>
+
+    </tabs>
+</TabPane>

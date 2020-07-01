@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ctf.ConverterController"
+          prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="Text" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextArea fx:id="textTextArea" text="" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Button id="text" text="Go" onAction="#doConverter" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+        <Label text="Bin" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextArea fx:id="binTextArea" text="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button id="bin" text="Go" onAction="#doConverter" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+        <Label text="Hex" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextArea fx:id="hexTextArea" text="" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Button id="hex" text="Go" onAction="#doConverter" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+        <Label text="Oct" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextArea fx:id="octTextArea" text="" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Button id="oct" text="Go" onAction="#doConverter" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+        <Label text="Base64" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextArea fx:id="base64TextArea" text="" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <Button id="base64" text="Go" onAction="#doConverter" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+
+        <Label text="EncodeUrl" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextArea fx:id="encodeurlTextArea" text="" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+        <Button id="encodeurl" onAction="#doConverter" text="Go" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="60.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+</GridPane>
+

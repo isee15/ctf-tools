@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="0.0" minWidth="0.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ctf.ManchemsterController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <TextArea fx:id="pathTextArea" promptText="file path" BorderPane.alignment="CENTER"
+                  text="95965569a596696995a9aa969996a6a9a669965656969996959669566a5655699669aa5656966a566a56656"/>
+    </top>
+    <bottom>
+        <TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                  BorderPane.alignment="CENTER"/>
+    </bottom>
+
+    <center>
+        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#decode1" text="曼彻斯特"/>
+                <Button mnemonicParsing="false" onAction="#decode2" text="差分曼彻斯特"/>
+            </children>
+        </FlowPane>
+    </center>
+</BorderPane>
+

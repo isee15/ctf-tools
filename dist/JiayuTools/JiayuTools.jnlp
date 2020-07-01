@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JiayuTools.jnlp">
+  <information>
+    <title>Jiayu CTF ?? by FLA9</title>
+    <vendor>Unknown</vendor>
+    <description>JiayuTools</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JDicTac.jar" size="89661" download="eager" />
+    <jar href="JPK_406.jar" size="178019" download="eager" />
+    <jar href="JiayuTools.jar" size="5262887" download="eager" />
+    <jar href="commons-imaging-1.0-alpha1.jar" size="748229" download="eager" />
+    <jar href="gson-2.8.5.jar" size="241622" download="eager" />
+    <jar href="guava-29.0-jre.jar" size="2792264" download="eager" />
+    <jar href="kaitai-struct-runtime-0.8.jar" size="13258" download="eager" />
+    <jar href="stegsolve.jar" size="58735" download="eager" />
+    <jar href="zip4j-2.5.2.jar" size="194069" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="ctf.Main"  name="JiayuTools" />
+  <update check="background"/>
+</jnlp>

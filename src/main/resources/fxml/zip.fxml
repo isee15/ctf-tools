@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="0.0" minWidth="0.0" onDragDropped="#onDragImg" onDragOver="#onImgDragOver"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ctf.ZipController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <TextArea fx:id="pathTextArea" promptText="file path" BorderPane.alignment="CENTER"/>
+    </top>
+    <bottom>
+        <TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                  BorderPane.alignment="CENTER"/>
+    </bottom>
+
+    <center>
+        <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#readCrc" text="Info"/>
+                <Button mnemonicParsing="false" onAction="#unzip" text="Unzip"/>
+                <Button mnemonicParsing="false" onAction="#cenOp" text="ZipCenOp伪加密"/>
+
+            </children>
+        </FlowPane>
+    </center>
+</BorderPane>
+
