@@ -3,6 +3,8 @@
 
 ### 使用方法
 https://github.com/isee15/ctf-tools/tree/master/dist/JiayuTools
+或者zip包
+https://github.com/isee15/ctf-tools/blob/master/JiayuTools.zip
 
 目录下执行java -jar JiayuTools.jar 
 
