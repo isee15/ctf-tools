@@ -8,6 +8,10 @@ https://github.com/isee15/ctf-tools/blob/master/JiayuTools.zip
 
 目录下执行java -jar JiayuTools.jar 
 
+### 运行环境
+需要JDK8，如果不是JDK8，javafx是单独发布的，需要安装openjfx环境
+https://openjfx.io/
+
 ### 界面
 - 鼠标usb pcap包
 <img src='usb.png'></img>
