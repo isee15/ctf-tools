@@ -1,9 +1,12 @@
 # ctf-tools
 网鼎杯培训用到的一些ctf工具(javafx)，编解码，键盘和鼠标抓包解密，维吉尼亚暴力破解，zip crc暴力破解，曼彻斯特解码等。
+需要其他工具可以提issue。
 
 ### 使用方法
 - update swing单文件版本，不需要javafx环境，支持java11以上
+#### 文件
   https://github.com/isee15/ctf-tools/releases/download/1.0/jiayutools-1.0-SNAPSHOT.jar
+  
   执行 java -jar jiayutools-1.0-SNAPSHOT.jar
 ### old javafx
 https://github.com/isee15/ctf-tools/tree/master/dist/JiayuTools
